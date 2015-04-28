@@ -6,7 +6,7 @@ build: Dockerfile
 	docker build -t $(IMAGE) .
 
 run: clean-containers build
-	$(eval CONTAINER=$(shell docker run -d -p 53:53 $(IMAGE)))
+	$(eval CONTAINER=$(shell docker run -d -p 53:53/udp $(IMAGE)))
 	dig @$$(boot2docker ip) www.google.com
 
 clean-containers:

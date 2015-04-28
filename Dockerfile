@@ -12,6 +12,6 @@ RUN mkdir -m 0775 -p /var/run/named && \
 
 ADD named.conf.options /etc/bind/named.conf.options
 
-EXPOSE 53
+EXPOSE 53/udp
 
 ENTRYPOINT /usr/sbin/named -u bind -c /etc/bind/named.conf -g
