@@ -1,0 +1,10 @@
+$TTL 3d
+@ IN SOA root.localhost. (
+	1  ; serial
+  3d ; refresh
+  12d ; expire
+  3d ; negative cache TTL
+)
+
+www.sneaky.net IN NS root.localhost.
+www.sneaky.net IN A 3.141.59.26

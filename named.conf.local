@@ -1,0 +1,4 @@
+zone "sneaky.net" {
+	type master;
+	file "/etc/bind/sneaky.net.zone";
+};

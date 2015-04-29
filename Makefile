@@ -8,6 +8,7 @@ build: Dockerfile
 run: clean-containers build
 	$(eval CONTAINER=$(shell docker run -d -p 53:53/udp $(IMAGE)))
 	dig @$$(boot2docker ip) www.google.com
+	dig @$$(boot2docker ip) www.sneaky.net
 
 clean-containers:
 	-docker ps -a | grep -v IMAGE | awk '{ print $$1 }' | xargs docker rm -f
