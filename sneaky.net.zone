@@ -1,9 +1,10 @@
-$TTL 3d
-@ IN SOA root.localhost. (
-	1  ; serial
-  3d ; refresh
-  12d ; expire
-  3d ; negative cache TTL
+$TTL 259200 ; 3 days in seconds
+@ IN SOA root.localhost. root@sneaky.net. (
+	3       ; serial
+  259200  ; refresh: 3 days in seconds
+	3600    ; retry: 1 hour in seconds
+  1036800 ; expire: 12 days in seconds
+  259200  ; minimum TTL: 3 days in seconds
 )
 
 www.sneaky.net IN NS root.localhost.
