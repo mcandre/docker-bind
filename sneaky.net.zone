@@ -8,4 +8,4 @@ $TTL 259200 ; 3 days in seconds
 	)
 	IN NS root.localhost.
 
-www.sneaky.net IN A 3.141.59.26
+www IN A 3.141.59.26
