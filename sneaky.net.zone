@@ -1,11 +1,12 @@
 $TTL 259200 ; 3 days in seconds
 @ IN SOA root.localhost. root.sneaky.net. (
-    2       ; serial
+    3       ; serial
     259200  ; refresh: 3 days in seconds
     3600    ; retry: 1 hour in seconds
     1036800 ; expire: 12 days in seconds
     259200  ; minimum TTL: 3 days in seconds
   )
   IN NS root.localhost.
+  ; TODO: add secondary, external name server here in case of failure
 
 www IN A 3.141.59.26
