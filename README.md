@@ -16,6 +16,10 @@ dig @$(boot2docker ip) www.sneaky.net +short
 3.141.59.26
 ```
 
+# ABOUT
+
+docker-bind is an example Docker container for a caching DNS resolver and master DNS authority.
+
 # REQUIREMENTS
 
 * [Docker](https://www.docker.com/)
