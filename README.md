@@ -14,6 +14,12 @@ dig @$(boot2docker ip) www.google.com +short
 216.58.216.196
 dig @$(boot2docker ip) www.sneaky.net +short
 3.141.59.26
+dig @$(boot2docker ip) -x 3.141.59.26 +noall +authority
+
+; <<>> DiG 9.8.3-P1 <<>> @192.168.59.103 -x 3.141.59.26 +noall +authority
+; (1 server found)
+;; global options: +cmd
+59.141.3.in-addr.arpa.	7200	IN	SOA	root.localhost. root.sneaky.net. 2015043000 259200 3600 1036800 7200
 ```
 
 # ABOUT

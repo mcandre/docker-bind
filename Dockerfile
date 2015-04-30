@@ -13,6 +13,7 @@ RUN mkdir -m 0775 -p /var/run/named && \
 ADD named.conf.options /etc/bind/named.conf.options
 ADD named.conf.local /etc/bind/named.conf.local
 ADD sneaky.net.zone /etc/bind/sneaky.net.zone
+ADD 59.141.3.in-addr.arpa.zone /etc/bind/59.141.3.in-addr.arpa.zone
 
 EXPOSE 53/udp
 

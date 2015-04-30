@@ -1,4 +1,9 @@
 zone "sneaky.net" {
-	type master;
-	file "/etc/bind/sneaky.net.zone";
+  type master;
+  file "/etc/bind/sneaky.net.zone";
+};
+
+zone "59.141.3.in-addr.arpa" {
+  type master;
+  file "/etc/bind/59.141.3.in-addr.arpa.zone";
 };
