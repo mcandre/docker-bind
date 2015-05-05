@@ -15,6 +15,6 @@ ADD named.conf.local /etc/bind/named.conf.local
 ADD sneaky.net.zone /etc/bind/sneaky.net.zone
 ADD 59.141.3.in-addr.arpa.zone /etc/bind/59.141.3.in-addr.arpa.zone
 
-EXPOSE 53/udp
+EXPOSE 53/udp 53/tcp
 
 ENTRYPOINT /usr/sbin/named -u bind -c /etc/bind/named.conf -g

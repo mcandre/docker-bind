@@ -6,7 +6,7 @@ build: Dockerfile
 	docker build -t $(IMAGE) .
 
 run: clean-containers build
-	$(eval CONTAINER=$(shell docker run -d -p 53:53/udp $(IMAGE)))
+	$(eval CONTAINER=$(shell docker run -d -p 53:53/udp -p 53:53/tcp $(IMAGE)))
 	docker exec $(CONTAINER) named-checkconf -zj
 	dig @$$(boot2docker ip) www.google.com +short
 	dig @$$(boot2docker ip) www.sneaky.net +short
