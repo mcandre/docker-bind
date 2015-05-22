@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM mcandre/docker-debian:etch
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
 ADD policy-rc.d /usr/sbin/policyrc.d
 ADD named.conf.options /etc/bind/named.conf.options

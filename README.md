@@ -8,7 +8,7 @@ https://registry.hub.docker.com/u/mcandre/docker-bind/
 
 ```
 $ make
-docker build -t mcandre/docker-bind:9 .
+docker build -t mcandre/docker-bind:8 .
 docker exec 827d129d9696e2c0e99587ce8bfc66f208d8a991d53d2f7fbd8e6947c87e2a24 named-checkconf -zj
 dig @$(boot2docker ip) www.google.com +short
 216.58.216.196
