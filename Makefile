@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-bind
+IMAGE=mcandre/docker-bind:9
 
 all: run
 
