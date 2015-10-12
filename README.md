@@ -10,11 +10,11 @@ https://registry.hub.docker.com/u/mcandre/docker-bind/
 $ make
 docker build -t mcandre/docker-bind .
 docker exec 827d129d9696e2c0e99587ce8bfc66f208d8a991d53d2f7fbd8e6947c87e2a24 named-checkconf -zj
-dig @$(boot2docker ip) www.google.com +short
+dig @$(docker-machine ip default) www.google.com +short
 216.58.216.196
-dig @$(boot2docker ip) www.sneaky.net +short
+dig @$(docker-machine ip default) www.sneaky.net +short
 3.141.59.26
-dig @$(boot2docker ip) -x 3.141.59.26 +noall +authority
+dig @$(docker-machine ip default) -x 3.141.59.26 +noall +authority
 
 ; <<>> DiG 9.8.3-P1 <<>> @192.168.59.103 -x 3.141.59.26 +noall +authority
 ; (1 server found)
@@ -50,8 +50,7 @@ $ sudo yum install docker-io bind-utils
 ## non-Linux
 
 * [VirtualBox](https://www.virtualbox.org/)
-* [Vagrant](https://www.vagrantup.com/)
-* [boot2docker](http://boot2docker.io/)
+* [Docker Toolbox](https://www.docker.com/toolbox)
 
 ### Mac OS X
 
@@ -60,8 +59,7 @@ $ sudo yum install docker-io bind-utils
 * [brew-cask](http://caskroom.io/)
 
 ```
-$ brew cask install virtualbox vagrant
-$ brew install boot2docker
+$ brew cask install dockertoolbox
 ```
 
 ### Windows
@@ -69,5 +67,7 @@ $ brew install boot2docker
 * [Chocolatey](https://chocolatey.org/)
 
 ```
-> chocolatey install docker bind-toolsonly make
+> chocolatey install virtualbox make
 ```
+
+* [DockerToolbox-1.8.2c.exe](https://github.com/docker/toolbox/releases/download/v1.8.2c/DockerToolbox-1.8.2c.exe)
